@@ -1,0 +1,15 @@
+{
+  "name": "codeslint",
+  "description": "代码静态检查相关工具仓库",
+  "author": {
+    "name": "沈经纬",
+    "email": "shenjw@codoon.com"
+  },
+  "devDependencies": {
+    "lerna": "^3.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:codoonfxd/codeslint.git"
+  }
+}
