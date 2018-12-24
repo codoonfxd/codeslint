@@ -1,6 +1,6 @@
 {
   "name": "@codoonfxd/commitlint-config",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "git commit message 规范配置",
   "keywords": [
     "git",
