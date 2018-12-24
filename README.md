@@ -1,6 +1,6 @@
-![codeslint](https://github.com/codoonfxd/codeslint/blob/assets/codeslint.png)
-
-🚑 代码静态检查工具仓库，包含的工具包括：
+<h1 align='center'>
+  <img src='assets/codeslint.png' alt='codeslint' />
+</h1>
 
 ## Packages
 
