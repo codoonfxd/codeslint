@@ -1,0 +1,37 @@
+{
+  "name": "@codoonfxd/cz-codoon-changelog",
+  "version": "0.1.0",
+  "description": "一个适用于codoon的commitizen适配器",
+  "keywords": [
+    "commitizen",
+    "changelog"
+  ],
+  "author": "沈经纬 <327538014@qq.com>",
+  "homepage": "https://github.com/codoonfxd/codeslint#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "engine.js",
+    "commit-types.json"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codoonfxd/codeslint.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/codoonfxd/codeslint/issues"
+  },
+  "dependencies": {
+    "lodash.map": "^4.6.0",
+    "longest": "^2.0.1",
+    "right-pad": "^1.0.1",
+    "word-wrap": "^1.2.3"
+  }
+}

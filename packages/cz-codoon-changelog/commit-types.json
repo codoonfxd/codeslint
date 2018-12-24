@@ -1,0 +1,52 @@
+{
+  "types": {
+    "feat": {
+      "description": "添加一个新功能",
+      "title": "Features"
+    },
+    "fix": {
+      "description": "一个bug修复",
+      "title": "Bug Fixes"
+    },
+    "pack": {
+      "description": "一次项目的打包",
+      "title": "Pack Project"
+    },
+    "docs": {
+      "description": "只有文档发生改变",
+      "title": "Documentation"
+    },
+    "style": {
+      "description": "不影响代码含义的改动（比如空格, 格式化, 添加或删除分号等）",
+      "title": "Styles"
+    },
+    "refactor": {
+      "description": "既不新增功能，也不修复bug的改动",
+      "title": "Code Refactoring"
+    },
+    "perf": {
+      "description": "提升性能的改动",
+      "title": "Performance Improvements"
+    },
+    "test": {
+      "description": "添加测试代码，或者修复错误的测试代码",
+      "title": "Tests"
+    },
+    "build": {
+      "description": "影响构建系统或者内部依赖的改动 (例如以下scopes: gulp, broccoli, npm)",
+      "title": "Builds"
+    },
+    "ci": {
+      "description": "持续集成配置和脚本的改动 (例如以下scopes: Travis, Circle, BrowserStack, SauceLabs)",
+      "title": "Continuous Integrations"
+    },
+    "chore": {
+      "description": "不修改src和test下文件的其他改动",
+      "title": "Chores"
+    },
+    "revert": {
+      "description": "回滚之前的提交",
+      "title": "Reverts"
+    }
+  }
+}
