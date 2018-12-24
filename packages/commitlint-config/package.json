@@ -1,0 +1,28 @@
+{
+  "name": "@codoonfxd/commitlint-config",
+  "version": "0.0.0",
+  "description": "git commit message 规范配置",
+  "keywords": [
+    "git",
+    "commit",
+    "lint",
+    "config"
+  ],
+  "author": "沈经纬 <327538014@qq.com>",
+  "homepage": "https://github.com/codoonfxd/codeslint#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codoonfxd/codeslint.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/codoonfxd/codeslint/issues"
+  }
+}
