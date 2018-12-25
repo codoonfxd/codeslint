@@ -1,11 +1,11 @@
 module.exports = {
   rules: {
-    'header-max-length': [1, 'always', 72],
+    'header-max-length': [2, 'always', 72],
     'body-leading-blank': [2, 'always'],
     'footer-leading-blank': [2, 'always'],
     'scope-case': [2, 'always', ['lower-case', 'camel-case', 'snake-case']],
     'scope-empty': [1, 'never'],
-    'subject-empty': [1, 'never'],
+    'subject-empty': [2, 'never'],
     'type-case': [2, 'always', 'lower-case'],
     'type-empty': [2, 'never'],
     'type-enum': [
