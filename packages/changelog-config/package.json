@@ -1,7 +1,7 @@
 {
   "name": "@codoonfxd/changelog-config",
   "version": "0.1.0",
-  "description": "A config repo of conventional-changelog.",
+  "description": "A config repo of conventional-changelog for codoon.",
   "keywords": [
     "conventional-changelog",
     "config"
