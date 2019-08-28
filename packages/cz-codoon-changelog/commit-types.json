@@ -8,10 +8,6 @@
       "description": "一个bug修复",
       "title": "Bug Fixes"
     },
-    "pack": {
-      "description": "一次项目的打包",
-      "title": "Pack Project"
-    },
     "docs": {
       "description": "只有文档发生改变",
       "title": "Documentation"
