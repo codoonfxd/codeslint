@@ -7,7 +7,7 @@
     "config"
   ],
   "author": "沈经纬 <327538014@qq.com>",
-  "homepage": "https://github.com/codoonfxd/codeslint",
+  "homepage": "https://github.com/codoonfxd/codeslint/tree/master/packages/changelog-config",
   "license": "MIT",
   "main": "index.js",
   "directories": {

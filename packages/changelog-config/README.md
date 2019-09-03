@@ -1,103 +1,44 @@
-# [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage Status][coveralls-image]][coveralls-url]
+# @codoonfxd/changelog-config
 
-> [conventional-changelog](https://github.com/ajoslin/conventional-changelog) [angular](https://github.com/angular/angular) preset
+> 该库用于配合标准的 commit message 生成基于 tag 的版本变更日志的配置。在使用之前请确保已经安装了[@codoonfxd/commitlint-config](https://github.com/codoonfxd/codeslint/blob/master/packages/commitlint-config/README.md)，并且提交的 commit 都是标准化的。
 
-**Issues with the convention itself should be reported on the Angular issue tracker.**
+## 🔩 安装
 
-## Angular Convention
-
-Angular's [commit message guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit).
-
-### Examples
-
-Appears under "Features" header, pencil subheader:
-
-```
-feat(pencil): add 'graphiteWidth' option
+```bash
+# npm
+npm install -D @codoonfxd/changelog-config conventional-changelog-cli
+# yarn
+yarn add -D @codoonfxd/changelog-config conventional-changelog-cli
 ```
 
-Appears under "Bug Fixes" header, graphite subheader, with a link to issue #28:
+> `conventional-changelog-cli`是生成 changelog 的命令行工具。
 
-```
-fix(graphite): stop graphite breaking when width < 0.1
+## 🛠 配置
 
-Closes #28
-```
+推荐的方式是通过 npm scripts 添加对应的指令。
 
-Appears under "Performance Improvements" header, and under "Breaking Changes" with the breaking change explanation:
+> 此配置库依赖于`conventional-changelog-cli`，具体操作请查看其[文档](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli)。
 
-```
-perf(pencil): remove graphiteWidth option
+### 1. 添加生成 changelog 命令
 
-BREAKING CHANGE: The graphiteWidth option has been removed. The default graphite width of 10mm is always used for performance reason.
-```
+> 默认的 Changelog 生成目录为根目录下的`CHANGELOG.md`文件，如果需要改变此文件目录或文件名，请自行更改下面命令中`-i`后面的参数`-i CHANGELOG.md`。
 
-The following commit and commit `667ecc1` do not appear in the changelog if they are under the same release. If not, the revert commit appears under the "Reverts" header.
-
-```
-revert: feat(pencil): add 'graphiteWidth' option
-
-This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
+```json
+{
+  "scripts": {
+    "gen-changelog": "conventional-changelog -n ./node_modules/@codoonfxd/changelog-config/index.js -i CHANGELOG.md -s -r 0"
+  }
+}
 ```
 
-### Commit Message Format
+### 2. 添加 Git 自动提交命令
 
-A commit message consists of a **header**, **body** and **footer**.  The header has a **type**, **scope** and **subject**:
+> 该命令将会自动提交 Changlog 的 commit，并自动 push 到远程，如果不需要可以自行删除部分命令。
 
+```json
+{
+  "scripts": {
+    "changelog": "npm run gen-changelog && git add . && git commit -m 'docs(changelog): update CHANGELOG.md.' && git push"
+  }
+}
 ```
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
-<BLANK LINE>
-<footer>
-```
-
-The **header** is mandatory and the **scope** of the header is optional.
-
-### Revert
-
-If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit. In the body it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
-
-### Type
-
-If the prefix is `feat`, `fix` or `perf`, it will appear in the changelog. However if there is any [BREAKING CHANGE](#footer), the commit will always appear in the changelog.
-
-Other prefixes are up to your discretion. Suggested prefixes are `build`, `ci`, `docs` ,`style`, `refactor`, and `test` for non-changelog related tasks.
-
-Details regarding these types can be found in the official [Angular Contributing Guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type)
-
-### Scope
-
-The scope could be anything specifying place of the commit change. For example `$location`,
-`$browser`, `$compile`, `$rootScope`, `ngHref`, `ngClick`, `ngView`, etc...
-
-### Subject
-
-The subject contains succinct description of the change:
-
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize first letter
-* no dot (.) at the end
-
-### Body
-
-Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
-The body should include the motivation for the change and contrast this with previous behavior.
-
-### Footer
-
-The footer should contain any information about **Breaking Changes** and is also the place to
-reference GitHub issues that this commit **Closes**.
-
-**Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines. The rest of the commit message is then used for this.
-
-A detailed explanation can be found in this [document][commit-message-format].
-
-[npm-image]: https://badge.fury.io/js/conventional-changelog-angular.svg
-[npm-url]: https://npmjs.org/package/conventional-changelog-angular
-[travis-image]: https://travis-ci.org/conventional-changelog/conventional-changelog-angular.svg?branch=master
-[travis-url]: https://travis-ci.org/conventional-changelog/conventional-changelog-angular
-[daviddm-image]: https://david-dm.org/conventional-changelog/conventional-changelog-angular.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/conventional-changelog/conventional-changelog-angular
-[coveralls-image]: https://coveralls.io/repos/conventional-changelog/conventional-changelog-angular/badge.svg
-[coveralls-url]: https://coveralls.io/r/conventional-changelog/conventional-changelog-angular
